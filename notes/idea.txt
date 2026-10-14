@@ -1,3 +1,19 @@
+
+
+
+CONCEPTUAL UNDERSTANDING (YES - DO THIS):
+├─ DSA: algo thinking, sys design, patterns
+├─ Your questionnaire: covers architectural reasoning
+├─ Team Segfault code: study how they structured 2 domains
+└─ Practice: build 2 complete flows, not 8 half-built
+
+TECHNOLOGY STACK (NO - SKIP THIS):
+├─ Don't learn Docker now (overkill)
+├─ Don't learn AWS (Render is instant)
+├─ Don't build Langchain engine (not relevant)
+└─ Focus: Python + FastAPI + React + PostgreSQL (proven)
+
+
 Should be able to read, understand and audit
 DSA
 - algo think and sys design
