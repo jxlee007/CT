@@ -4,6 +4,9 @@
 **Evaluator:** Piyush Soni (`piso@odoo.com`) | GitHub: `piso-odoo`, `hackathon-odoo`  
 **Duration:** 8 Hours (9:00 AM – 5:00 PM, Oct 31, 2026)  
 
+## Demo Video
+- **Video Link:** [Public Video Link - Submit by Oct 31, 5:30 PM]
+
 ---
 
 # [Project Title]
@@ -22,31 +25,8 @@
 - **Database:** PostgreSQL (Local)
 - **ORM / Migrations:** SQLAlchemy
 
-## Setup & Local Run Instructions
-```bash
-# 1. Clone repository
-git clone <repo-url>
-cd OH_SUBMIT
-
-# 2. Virtual environment setup
-python -m venv .venv
-source .venv/bin/activate  # On Windows: .venv\Scripts\activate
-
-# 3. Install backend dependencies
-pip install -r backend/requirements.txt
-
-# 4. Database setup (PostgreSQL local)
-# Update DATABASE_URL in backend/.env if needed
-python -m backend.scripts.seed
-
-# 5. Start Backend API
-uvicorn backend.app.main:app --reload --port 8000
-
-# 6. Start Frontend (in a separate terminal)
-cd frontend
-npm install
-npm run dev
-```
+##  [_ARCHITECTURE.md](_ARCHITECTURE.md)
+ For Detailed architectural design decisions are system data flow diagram visit _ARCHITECTURE.md.
 
 ## Folder Structure
 ```text
@@ -78,10 +58,31 @@ OH_SUBMIT/
 └── README.md
 ```
 
-##  [_ARCHITECTURE.md](_ARCHITECTURE.md)
- For Detailed architectural design decisions are system data flow diagram visit _ARCHITECTURE.md.
+## Setup & Local Run Instructions
+```bash
+# 1. Clone repository
+git clone <repo-url>
+cd OH_SUBMIT
 
-## Demo Video
-- **Video Link:** [Public Video Link - Submit by Oct 31, 5:30 PM]
+# 2. Virtual environment setup
+python -m venv .venv
+source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+
+# 3. Install backend dependencies
+pip install -r backend/requirements.txt
+
+# 4. Database setup (PostgreSQL local)
+# Update DATABASE_URL in backend/.env if needed
+python -m backend.scripts.seed
+
+# 5. Start Backend API
+uvicorn backend.app.main:app --reload --port 8000
+
+# 6. Start Frontend (in a separate terminal)
+cd frontend
+npm install
+npm run dev
+```
+
 ---
 **Built by:** Jagmohan Singh Malhi
