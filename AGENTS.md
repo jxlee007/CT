@@ -155,7 +155,7 @@ The agent must reason and validate through the 8 levels of architectural thinkin
 | **02:00 PM** | **FREEZE** | - | **Feature freeze: zero new features** |
 | **02:00 - 04:30 PM** | Hardening | Levels 4 & 5 (Q13-Q20) | 3-layer validation testing, edge cases, responsive checks, git log |
 | **04:30 - 05:00 PM** | Final Polish | Level 8 (Q29-Q32) | README documentation, fresh clone verification, final commit |
-| **05:00 - 05:30 PM** | Demo & Video | Level 8 | Record 2-3 min video, upload, submit video link on portal |
+| **05:00 - 05:30 PM** | Demo & Video | Level 8 | Record 5-6 min deep-dive video, upload, submit video link on portal |
 
 ---
 
@@ -188,7 +188,7 @@ If behind schedule, cut:
 - [ ] API: resource-oriented, consistent responses, accurate HTTP codes
 - [ ] Code: single responsibility, no blind copy-paste, no dead code
 - [ ] Security: hashed secrets, server-side checks, input sanitization
-- [ ] Demo video: 2-3 minutes, covers validation + responsive view
+- [ ] Demo video: 5-6 minutes, covers core flow, 3-layer validation, responsive view, and architectural decisions
 
 ---
 
@@ -202,13 +202,24 @@ If behind schedule, cut:
 
 ---
 
-## Demo Script (2-3 min)
+## Progressive Demo Script (5-6 min)
 
-1. **Open app (10 sec):** Show running app locally and clean interface
-2. **Main flow (60 sec):** Happy path execution (Q9) with dynamic PostgreSQL updates
-3. **Validation error (30 sec):** Trigger client, server, and DB error handling (Q10, Q28)
-4. **Responsive view (30 sec):** Switch between 375px mobile, 768px tablet, and desktop view
-5. **Architecture overview (30 sec):** Explain in 30 seconds using Level 8 (Q29-Q31)
+> **Sprint Protocol:** The agent and developer prepare and refine talking points progressively during the 8-hour sprint as each layer is built.
+
+1. **Executive Overview & Problem Context (0:00 - 0:45 | 45s):**
+   - Introduce yourself (`Jagmohan Singh Malhi`), the chosen problem statement, user persona, and the offline-first tech stack rationale (why local PostgreSQL over BaaS).
+2. **Main Flow & Dynamic Data (0:45 - 2:15 | 90s):**
+   - Execute the primary happy path end-to-end. Show immediate PostgreSQL persistence (refresh browser to prove zero static JSON).
+3. **3-Layer Validation Defense (2:15 - 3:30 | 75s):**
+   - Live triggering of errors across all 3 layers: Client-side friendly inline warning $\to$ FastAPI Pydantic `422 Unprocessable Entity` $\to$ PostgreSQL `UNIQUE`/`CHECK`/FK constraint protection.
+4. **Responsive UI & Navigation Flow (3:30 - 4:30 | 60s):**
+   - Live responsive demonstration at 375px (mobile), 768px (tablet), and 1280px (desktop).
+   - Show menu placement, spacing, and strict compliance with the 3-click rule.
+5. **Architectural Deep-Dive & Decisions (4:30 - 5:30 | 60s):**
+   - Present `_ARCHITECTURE.md` and the 30-second architecture diagram.
+   - Defend the #1 priority: relational database design, normalization (3NF), indexed lookups, and avoiding fragile 3rd-party dependencies.
+6. **Code Tour & Summary (5:30 - 6:00 | 30s):**
+   - Quick tour of modular codebase structure (single responsibility per function) and clean semantic Git commit history.
 
 ---
 

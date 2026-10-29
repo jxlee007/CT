@@ -122,6 +122,7 @@ flowchart TD
   - *Alternative Considered:* Firebase / Supabase / MongoDB Atlas.
   - *Why Rejected:* BaaS introduces internet latency, cloud billing, rate limits, and failure modes when third-party platforms go down. Local PostgreSQL demonstrates true relational engineering and aligns directly with the official evaluator briefing.
 - **Q32 (Blast Radius):** Component failure in the frontend is isolated by toast banners; database transaction rollback protects persistence on any service exception.
+- **Progressive Demo Script (5–6 Minutes):** The architecture reasoning and decisions detailed here are woven directly into the video script as development progresses across the 8 hours, ensuring clear communication of both technical results and design trade-offs.
 
 ---
 
