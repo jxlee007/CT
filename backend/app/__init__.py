@@ -1,2 +1,0 @@
-"""Odoo Hackathon Application Package."""
-
